@@ -1,0 +1,7 @@
+@use 'base';
+@import 'variables';
+
+.inverse {
+  background-color: base.$primary-color;
+  color: $text-primary;
+}

@@ -10,4 +10,13 @@ module.exports = {
       fullInstall: true,
     },
   },
+  css: {
+    loaderOptions: {
+      scss: {
+        prependData: `
+            @import "~@/scss/index.scss";
+          `,
+      },
+    },
+  },
 };
