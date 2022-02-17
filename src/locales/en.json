@@ -1,3 +1,21 @@
 {
-  "message": "hello i18n !!"
+  "main": {
+    "add": "Add",
+    "close": "Close",
+    "complete": "Complete",
+    "completed": "Complete",
+    "delete": "Delete",
+    "edit": "Edit",
+    "locale": {
+      "en": "English",
+      "zh_CN": "Chinese - Simplified"
+    },
+    "modal_title": "Todo Form",
+    "pending": "Pending",
+    "save": "Save",
+    "title": "To-Do",
+    "title_description": "Mini Exercise",
+    "todo_action": "{0} Todo",
+    "uncomplete": "Uncomplete"
+  }
 }

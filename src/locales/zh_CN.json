@@ -1,3 +1,21 @@
 {
-  "message": "hello i18n !!!!"
+  "main": {
+    "add": "添加",
+    "close": "关闭",
+    "complete": "完成",
+    "completed": "已完成",
+    "delete": "删除",
+    "edit": "编辑",
+    "locale": {
+      "en": "英语",
+      "zh_CN": "简体中文"
+    },
+    "modal_title": "待办表格",
+    "pending": "待办",
+    "save": "保存",
+    "title": "待办事项",
+    "title_description": "迷你练习",
+    "todo_action": "{0}待办",
+    "uncomplete": "未完成"
+  }
 }

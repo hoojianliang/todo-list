@@ -1,7 +1,17 @@
-@use 'base';
-@import 'variables';
+@use 'variables';
 
-.inverse {
-  background-color: base.$primary-color;
-  color: $text-primary;
+.title {
+  color: variables.$text-primary;
+
+  &-description {
+    color: variables.$text-secondary;
+  }
+}
+
+.todo {
+  &-container {
+    max-width: 768px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }

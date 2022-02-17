@@ -1,15 +1,14 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <TodoList />
+  <TodoContainer />
 </template>
 
 <script>
-import TodoList from "./components/TodoList.vue";
+import TodoContainer from "./components/TodoContainer.vue";
 
 export default {
   name: "App",
   components: {
-    TodoList,
+    TodoContainer,
   },
 };
 </script>
