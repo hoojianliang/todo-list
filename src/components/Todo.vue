@@ -59,6 +59,11 @@
       </MDBTooltip>
     </div>
   </MDBListGroupItem>
+  <TodoConfirmation
+    ref="delete"
+    v-bind:todo="todo"
+    v-bind:action="$t('main.delete')"
+  />
 </template>
 
 <script>
@@ -71,6 +76,7 @@ import {
 } from "mdb-vue-ui-kit";
 import { ref } from "vue";
 import TodoForm from "./TodoForm.vue";
+import TodoConfirmation from "./TodoConfirmation.vue";
 
 export default {
   props: ["todo"],
@@ -82,6 +88,7 @@ export default {
     MDBBtn,
     MDBIcon,
     TodoForm,
+    TodoConfirmation,
   },
   setup() {
     const editTip = ref(false);
@@ -101,7 +108,7 @@ export default {
       this.$refs.form.show();
     },
     remove() {
-      this.$store.commit("deleteTodo", this.todo);
+      this.$refs.delete.show();
     },
   },
 };

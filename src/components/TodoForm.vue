@@ -1,7 +1,7 @@
 <template>
   <MDBModal tabindex="-1" labelledby="Todo Form" v-model="showModal">
     <MDBModalHeader>
-      <MDBModalTitle id="exampleModalLabel">
+      <MDBModalTitle>
         {{ $t("main.modal_title") }}
       </MDBModalTitle>
     </MDBModalHeader>
@@ -37,7 +37,12 @@
     </MDBModalBody>
     <MDBModalFooter>
       <MDBBtn color="light" @click="hide">{{ $t("main.close") }}</MDBBtn>
-      <MDBBtn color="primary" @click="save">{{ $t("main.save") }}</MDBBtn>
+      <MDBBtn
+        color="primary"
+        @click="save"
+        :disabled="!form.en || !form.zh_CN"
+        >{{ $t("main.save") }}</MDBBtn
+      >
     </MDBModalFooter>
   </MDBModal>
 </template>
@@ -74,14 +79,12 @@ export default {
   },
   methods: {
     show() {
+      this.reset();
       if (this.todo) this.form = { ...this.todo.title };
       this.showModal = true;
     },
     hide() {
-      this.form = {
-        en: null,
-        zh_CN: null,
-      };
+      this.reset();
       this.showModal = false;
     },
     save() {
@@ -89,6 +92,12 @@ export default {
         this.$store.commit("editTodo", { todo: this.todo, form: this.form });
       else this.$store.commit("addTodo", this.form);
       this.hide();
+    },
+    reset() {
+      this.form = {
+        en: null,
+        zh_CN: null,
+      };
     },
   },
 };

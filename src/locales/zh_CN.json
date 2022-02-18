@@ -1,9 +1,12 @@
 {
   "main": {
     "add": "添加",
+    "cancel": "取消",
     "close": "关闭",
     "complete": "完成",
     "completed": "已完成",
+    "confirmation_text": "您确定您要%{action} - %{title}",
+    "confirmation_title": "%{action}待办",
     "delete": "删除",
     "edit": "编辑",
     "locale": {
@@ -16,6 +19,7 @@
     "title": "待办事项",
     "title_description": "迷你练习",
     "todo_action": "{0}待办",
-    "uncomplete": "未完成"
+    "uncomplete": "未完成",
+    "yes": "确定"
   }
 }

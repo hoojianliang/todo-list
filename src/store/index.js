@@ -23,7 +23,6 @@ const store = createStore({
     deleteTodo: function (state, { id }) {
       let todoIndex = state.todos.indexOf(store.getters.thisTodo(id));
       state.todos.splice(todoIndex, 1);
-      delete state.todos[todoIndex].text;
     },
     toggleTodoStatus: function (state, { todo, status }) {
       todo.completed = status;
