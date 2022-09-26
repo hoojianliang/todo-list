@@ -1,4 +1,5 @@
-# todo-list
+# Razer Assessment
+todo-list
 
 ## Project setup
 ```
